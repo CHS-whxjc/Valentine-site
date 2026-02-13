@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Valentine</title>
+  <meta name="robots" content="noindex,nofollow" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Password Gate -->
+  <div class="gate" data-gate role="dialog" aria-modal="true" aria-labelledby="gateTitle">
+    <div class="gate-card" data-gate-card>
+      <h2 class="gate-title" id="gateTitle">비밀번호 입력</h2>
+      <p class="gate-sub">공유받은 사람만 들어올 수 있어요.</p>
+
+      <form class="gate-form" data-gate-form autocomplete="off">
+        <label class="sr-only" for="gatePassword">Password</label>
+        <input
+          id="gatePassword"
+          class="gate-input"
+          data-gate-input
+          type="password"
+          inputmode="numeric"
+          pattern="[0-9]*"
+          maxlength="4"
+          placeholder="****"
+          aria-describedby="gateError"
+        />
+        <button class="btn btn-yes gate-btn" type="submit">입장</button>
+      </form>
+
+      <p class="gate-error" id="gateError" data-gate-error aria-live="polite"></p>
+    </div>
+  </div>
+
+  <!-- Main -->
+  <main class="wrap" aria-label="valentine content">
+    <section class="lux-card" aria-label="valentine hero">
+      <!-- subtle emoji ornaments -->
+      <div class="lux-ornaments" aria-hidden="true">
+        <span class="orb orb-1">🍫</span>
+        <span class="orb orb-2">🐗</span>
+        <span class="orb orb-3">🍪</span>
+        <span class="orb orb-4">✨</span>
+      </div>
+
+      <header class="lux-head">
+        <p class="lux-kicker">PRIVATE INVITATION • 02 FEB</p>
+        <h1 class="title">will you be my valentine</h1>
+        <p class="subtitle">
+          오늘은 <span class="accent-word">yes</span>만 받는 날.
+          <br />
+          🐗🍫🍪 준비 완료.
+        </p>
+      </header>
+
+      <div class="lux-divider" aria-hidden="true"></div>
+
+      <!-- emoji centerpiece -->
+      <div class="emoji-hero" aria-label="emoji decor">
+        <div class="emoji-line" aria-hidden="true">
+          <span class="emoji">🐗</span>
+          <span class="emoji small">✦</span>
+          <span class="emoji">🍫</span>
+          <span class="emoji small">✦</span>
+          <span class="emoji">🍪</span>
+          <span class="emoji small">✦</span>
+          <span class="emoji">💌</span>
+        </div>
+
+        <div class="emoji-caption" aria-hidden="true">
+          <span>chocolate</span>
+          <span class="dot">·</span>
+          <span>chewy cookie</span>
+          <span class="dot">·</span>
+          <span>one question</span>
+        </div>
+      </div>
+
+      <div class="lux-divider" aria-hidden="true"></div>
+
+      <div class="cta-row" aria-label="answer buttons">
+        <button id="yesBtn" class="btn btn-yes" type="button">yes</button>
+        <button id="noBtn" class="btn btn-no" type="button">no</button>
+      </div>
+
+      <p class="fineprint">
+        hint: <b>no</b>는 부끄러워서 가까이 가면 도망가요.
+      </p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
